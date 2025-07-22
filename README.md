@@ -25,15 +25,18 @@ The framework integrates the following components:
 ```bash
 PRISM/
 ├── data specifications/
-│   └── data_requirements.md     # Input data specifications (no real data included)
+│   └── data_requirements.md                            # Input data specifications (no real data included)
 ├── notebooks/
 │   ├── Step 2 Aggregate Price Elasticity.ipynb
 │   ├── Step 3 Subgroup Discovery.ipynb
 │   ├── Step 4 Predict Price Elasticity ARIMA.ipynb
 |   ├── Step 5 Compute Price Recommendation.ipynb
 │   └── functions_definitions.ipynb                     # Utility functions 
-├── src/
-│   └──  my_pysubgroup_extensions/  # Custom EMM target & quality functions
+├── src/ pysubgroup extensions                          # Custom EMM targets & quality functions
+│   ├── __init__.py                                     # Replace old __init__.py with this one
+│   ├── array_target.py                                 # Array target for EMM & associated quality functions
+│   ├── binary_target.py                                # Replace old binary_target.py with this one; contains categorical quality functions
+│   └── correlation_target.py                           # Correlation target for EMM & associated quality functions
 ├── README.md
 └── requirements.txt
 ```
